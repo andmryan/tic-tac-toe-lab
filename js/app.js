@@ -49,10 +49,10 @@ render(
 //6) Handle a player clicking a square with a `handleClick` function.
 // handleClick() => {}
 
-// placePiece()
-// checkWinner()
-// checkTie()
-// switchPlayer()
+// placePiece() => {}
+// checkWinner() => {}
+// checkTie() => {}
+// switchPlayer() => {}
 
 //7) Create Reset functionality.
 // Something, something, click reset button and the game clears.
