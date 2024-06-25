@@ -14,7 +14,7 @@ const winningCombos = [
     [2, 4, 6]
 ];
 
-const resetButton = document.querySelector('#reset');
+
 /*---------------------------- Variables (state) ----------------------------*/
 //1) Define the required variables used to track the state of the game.
 let board = [
@@ -31,6 +31,7 @@ const squareEls = document.querySelectorAll('.sqr');
 // console.log(squareEls)
 const messageEl = document.querySelector('#message');
 // console.log(messageEl)
+const resetButton = document.querySelector('#reset');
 
 /*-------------------------------- Functions --------------------------------*/
 //3) Upon loading, the game state should be initialized, and a function should 
@@ -109,6 +110,7 @@ function checkWinner() {
 
 // checkTie() => {
 function checkTie() {
+    tie = !winner && board.every(cell => cell !== '')
 }
 
 // switchPlayer() => {}
@@ -129,6 +131,7 @@ squareEls.forEach(squareEl => {
     squareEl.addEventListener('click', handleClick);
   });
 
-  resetButton.addEventListener('click', init)
-
-// I did as much as I could understand how to do + figured submitting what I had is better than nothing at all. 
+resetButton.addEventListener('click', () => {
+    init()
+    squareEls.forEach(cell => cell.innerText = '')
+})
